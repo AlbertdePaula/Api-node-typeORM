@@ -1,6 +1,7 @@
-import "reflect"
+import "reflect-metadata";
 import express from "express";
 
+const port = 3000;
 const app = express();
 
-app.listen(3000, () => console.log ("Servidor tá rodando"));
+app.listen(port, () => console.log (`Servidor tá rodando na porta ${port}`));
