@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 
-export const AppdDataSource = new DataSource({
+/* export const AppDataSource = new DataSource({
    type: 'postgres',
    host: 'ec2-44-193-178-122.compute-1.amazonaws.com',
    port: 5432,
@@ -10,5 +10,18 @@ export const AppdDataSource = new DataSource({
    synchronize: true,
    logging: true,
    //entities: [User],
+   migrationsTableName: 'CreateAreas'
+}) */
+
+export const AppDataSource = new DataSource({
+   type: 'postgres',
+   host: 'localhost',
+   port: 5432,
+   username: 'postgres',
+   password: '1234',
+   database: 'mydb',
+   synchronize: true,
+   logging: true,
+   entities: [],
    migrationsTableName: 'CreateAreas'
 })

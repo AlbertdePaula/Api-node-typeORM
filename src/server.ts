@@ -1,18 +1,17 @@
 import "reflect-metadata";
-import express from "express";
-import { AppdDataSource } from "./db";
-
-const port = 3000;
-const app = express();
+import app from './app'
+import { AppDataSource } from "./db";
 
 async function main() {
     try {
-        await AppdDataSource.initialize();
-        app.listen(port);
-        console.log(`Servidor tá rodando na porta ${port}`);
-    } catch (error) {
-        console.log('error')
+        await AppDataSource.initialize();
+        console.log ("Database conected!")
+        app.listen(3000);
+        console.log('Servidor tá rodando na porta 3000');
+    }
+    catch (error) {
+        console.error(error);
     }
 }
-
+main();
 
