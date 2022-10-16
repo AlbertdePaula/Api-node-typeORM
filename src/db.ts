@@ -1,3 +1,4 @@
+import { Engine } from './entities/Engine';
 import { DataSource } from "typeorm";
 
 /* export const AppDataSource = new DataSource({
@@ -9,7 +10,7 @@ import { DataSource } from "typeorm";
    database: 'd7u43ie29ie6m',
    synchronize: true,
    logging: true,
-   //entities: [User],
+   entities: [],
    migrationsTableName: 'CreateAreas'
 }) */
 
@@ -19,9 +20,9 @@ export const AppDataSource = new DataSource({
    port: 5432,
    username: 'postgres',
    password: '1234',
-   database: 'mydb',
+   database: 'order-helper',
    synchronize: true,
    logging: true,
-   entities: [],
+   entities: [Engine],
    migrationsTableName: 'CreateAreas'
 })
