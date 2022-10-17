@@ -20,7 +20,7 @@ export const AppDataSource = new DataSource({
    port: 5432,
    username: 'postgres',
    password: '1234',
-   database: 'order-helper',
+   database: 'order-helperDB',
    synchronize: true,
    logging: true,
    entities: [Engine],
