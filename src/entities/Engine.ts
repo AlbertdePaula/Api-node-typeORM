@@ -1,12 +1,19 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { 
+    BaseEntity,
+    Column, 
+    CreateDateColumn, 
+    Entity, 
+    PrimaryGeneratedColumn, 
+    UpdateDateColumn,     
+} from "typeorm";
 
 @Entity()
-export class Engine {
+export class Engine extends BaseEntity{
 
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn("uuid")
     id: string;
 
-    @Column()
+    @Column({unique: true})
     tag: string;
 
     @Column()

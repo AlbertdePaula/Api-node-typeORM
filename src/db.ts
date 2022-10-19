@@ -1,3 +1,5 @@
+import { Order } from './entities/Order';
+import { Part } from './entities/Part';
 import { Engine } from './entities/Engine';
 import { DataSource } from "typeorm";
 
@@ -23,6 +25,7 @@ export const AppDataSource = new DataSource({
    database: 'order-helperDB',
    synchronize: true,
    logging: true,
-   entities: [Engine],
-   migrationsTableName: 'CreateAreas'
+   entities: ["src/entities/*.ts"],
+   //migrations: ['src/database/migrations']
+   //migrationsTableName: 'CreateAreas'
 })
