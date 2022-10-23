@@ -3,6 +3,6 @@ import { createEngine } from "../controllers/engine.controller";
 
 const router = Router();
 
-router.get("/engines", createEngine);
+router.post("/engines", createEngine);
 
 export default router;
