@@ -1,7 +1,8 @@
 import { Router } from "express";
+import { createEngine } from "../controllers/engine.controller";
 
 const router = Router();
 
-router.get('/hello', (req,res) => res.send('hello world'))
+router.get("/engines", createEngine);
 
 export default router;
