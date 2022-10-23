@@ -14,3 +14,7 @@ const docker = [
     'docker run -p 5432:5432 -e POSTGRES_PASSWORD=1234 postgres', //Criar container Docker;
     'docker rename NOME-ANTIGO NOME-NOVO'//Renomear container Docker;
 ]
+
+const typeorm = [
+    'yarn typeorm migration:create ./src/database/migrations' //gerar migration;
+]

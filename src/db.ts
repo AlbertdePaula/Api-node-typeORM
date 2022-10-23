@@ -1,6 +1,3 @@
-import { Order } from './entities/Order';
-import { Part } from './entities/Part';
-import { Engine } from './entities/Engine';
 import { DataSource } from "typeorm";
 
 /* export const AppDataSource = new DataSource({
@@ -26,6 +23,6 @@ export const AppDataSource = new DataSource({
    synchronize: true,
    logging: true,
    entities: ["src/entities/*.ts"],
-   //migrations: ['src/database/migrations']
-   //migrationsTableName: 'CreateAreas'
+   migrations: ['src/database/migrations'],
+   //migrationsTableName: "CreateAreas"
 })
