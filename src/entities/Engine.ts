@@ -4,6 +4,7 @@ import {
     CreateDateColumn, 
     Entity, 
     PrimaryGeneratedColumn, 
+    Timestamp, 
     UpdateDateColumn,     
 } from "typeorm";
 
@@ -16,21 +17,27 @@ export class Engine extends BaseEntity{
     @Column({unique: true})
     tag: string;
 
-    @Column()
+    @Column({nullable: true})
     description: string;
 
-    @Column()
+    @Column({nullable: true})
     current: number;
 
-    @Column()
+    @Column({nullable: true})
     power: number;
 
-    @Column()
+    @Column({nullable: true})
     rpm: number;
 
+    @Column()
+    area: string;
+
+    @Column()
+    createdFor: string;
+
     @CreateDateColumn()
-    createdAt: Date;
+    createdAt: Timestamp;
 
     @UpdateDateColumn()
-    updatedAd: Date;
+    updatedAd: Timestamp;
 }

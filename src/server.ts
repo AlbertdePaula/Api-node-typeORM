@@ -10,7 +10,7 @@ async function main() {
         console.log('Servidor tá rodando na porta 3000');
     }
     catch (error) {
-        console.error(error);
+        console.error(`erro aqui: ${error}`);
     }
 }
 main();
