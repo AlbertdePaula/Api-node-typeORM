@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "ts-node-dev --transpile-only src/server.ts",
-    "typeorm:win": "ts-node-dev node_modules/.bin/typeorm",
+    "typeorm": "typeorm-ts-node-commonjs",
     "build": "tsc",
     "start": "node dist/server.js"
   },

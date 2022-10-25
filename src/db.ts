@@ -19,10 +19,10 @@ export const AppDataSource = new DataSource({
    port: 5432,
    username: 'postgres',
    password: '1234',
-   database: 'order-helperDB',
+   database: 'orderhelperdb',
    synchronize: true,
    logging: true,
    entities: ["src/entities/*.ts"],
-   migrations: ['src/database/migrations'],
+   migrations: ['src/database/migrations/*.ts'],
    //migrationsTableName: "CreateAreas"
 })

@@ -1,4 +1,4 @@
-import { Engine } from './../../entities/Engine';
+import { Engine } from '../../entity/Engine';
 import { MigrationInterface, QueryRunner, Table } from "typeorm"
 
 export class CreateAreas1666483912019 implements MigrationInterface {
@@ -15,24 +15,32 @@ export class CreateAreas1666483912019 implements MigrationInterface {
                     },
                     {
                         name: "tag",
-                        type: "string",
+                        type: "varchar",
                         isUnique: true
                     },
                     {
                         name: "description",
-                        type:"string",
+                        type:"varchar",
                     },
                     {
                         name: "current",
-                        type:"string",
+                        type:"varchar",
                     },
                     {
                         name: "power",
-                        type:"string",
+                        type:"varchar",
                     },
                     {
                         name: "rpm",
-                        type:"string",
+                        type:"varchar",
+                    },
+                    {
+                        name: "area",
+                        type: "varchar"
+                    },
+                    {
+                        name: "createdFor",
+                        type: "varchar"
                     },
                     {
                         name: "creted_at",

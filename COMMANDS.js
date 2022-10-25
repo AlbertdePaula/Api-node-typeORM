@@ -16,5 +16,7 @@ const docker = [
 ]
 
 const typeorm = [
-    'yarn typeorm migration:create ./src/database/migrations' //gerar migration;
+    'yarn typeorm migration:create ./src/database/migrations', //Criar migration;
+    'yarn typeorm entity:create ./src/entity/Engine.ts', //Criar entidade
+    'yarn typeorm migration:run -d ./src/db.ts', //Rodar migration
 ]

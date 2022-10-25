@@ -1,4 +1,4 @@
-import { Engine } from './../entities/Engine';
+import { Engine } from '../entity/Engine';
 import { Request, Response } from "express-serve-static-core"
 
 export const createEngine = async (req: Request, res: Response) => {
