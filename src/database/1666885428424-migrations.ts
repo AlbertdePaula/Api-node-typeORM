@@ -1,4 +1,3 @@
-import { Engine } from '../../entity/Engine';
 import { MigrationInterface, QueryRunner, Table } from "typeorm"
 
 export class CreateAreas1666483912019 implements MigrationInterface {
@@ -11,12 +10,16 @@ export class CreateAreas1666483912019 implements MigrationInterface {
                     {
                         name: "id",
                         type: "uuid",
-                        isPrimary: true
+                        isPrimary: true,
+                        generationStrategy: 'uuid',
+                        default: 'uuid_generate_v4()'
+
                     },
                     {
                         name: "tag",
                         type: "varchar",
-                        isUnique: true
+                        isUnique: true,
+                        isNullable: false
                     },
                     {
                         name: "description",
@@ -62,3 +65,4 @@ export class CreateAreas1666483912019 implements MigrationInterface {
     }
 
 }
+
