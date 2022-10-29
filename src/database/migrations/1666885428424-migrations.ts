@@ -5,15 +5,14 @@ export class CreateAreas1666483912019 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name:"engines",
+                name: "engines",
                 columns: [
                     {
                         name: "id",
                         type: "uuid",
                         isPrimary: true,
                         generationStrategy: 'uuid',
-                        default: 'uuid_generate_v4()'
-
+                        //default: 'uuid_generate_v4()'
                     },
                     {
                         name: "tag",
@@ -23,19 +22,19 @@ export class CreateAreas1666483912019 implements MigrationInterface {
                     },
                     {
                         name: "description",
-                        type:"varchar",
+                        type: "varchar",
                     },
                     {
                         name: "current",
-                        type:"varchar",
+                        type: "varchar",
                     },
                     {
                         name: "power",
-                        type:"varchar",
+                        type: "varchar",
                     },
                     {
                         name: "rpm",
-                        type:"varchar",
+                        type: "varchar",
                     },
                     {
                         name: "area",
@@ -43,25 +42,25 @@ export class CreateAreas1666483912019 implements MigrationInterface {
                     },
                     {
                         name: "createdFor",
-                        type: "varchar"
+                        type: "number"
                     },
                     {
                         name: "creted_at",
-                        type:"timestamp",
+                        type: "timestamp",
                         default: "now()"
                     },
                     {
                         name: "updated_at",
-                        type:"timestamp",
+                        type: "timestamp",
                         default: "now()"
-                    },
+                    }
                 ]
             })
         )
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable ("engines")
+        await queryRunner.dropTable("engines")
     }
 
 }
